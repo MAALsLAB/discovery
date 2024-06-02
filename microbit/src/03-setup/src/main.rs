@@ -10,5 +10,8 @@ use cortex_m_rt::entry;
 fn main() -> ! {
     rtt_init_print!();
     rprintln!("Hello World");
+    rprintln!("Hello MAAL");
+    rprintln!("5 + 5 = {}", 5 + 5);
+    
     loop {}
 }
