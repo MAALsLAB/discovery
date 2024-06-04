@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Cargo Build Binary",
+			"type": "shell",
+			"command": "cargo build --features v2 --target thumbv7em-none-eabihf",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Cargo Check Binray",
+			"type": "shell",
+			"command": "cargo readobj --features v2 --target thumbv7em-none-eabihf --bin led-roulette -- --file-headers",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Cargo Flash Debug",
+			"type": "shell",
+			"command": "cargo embed --features v2 --target thumbv7em-none-eabihf",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Cargo Flash Release",
+			"type": "shell",
+			"command": "cargo embed --features v2 --target thumbv7em-none-eabihf --release",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": "build"
+		}
+	]
+}
